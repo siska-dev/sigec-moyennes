@@ -8,3 +8,14 @@ def moyenne_ponderee(notes, coefficients):
         raise ValueError("coefficients invalides")
     total = sum(n * c for n, c in zip(notes, coefficients))
     return total / sum(coefficients)
+def mention(moyenne):
+    """Mention associee a une moyenne sur 20."""
+    if moyenne < 10:
+        return "Ajourne"
+    if moyenne < 12:
+        return "Passable"
+    if moyenne < 14:
+        return "Assez bien"
+    if moyenne < 16:
+        return "Bien"
+    return "Tres bien"
